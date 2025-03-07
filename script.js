@@ -40,4 +40,10 @@ function handleChange(event) {
     const value = event.target.value;
 
     handleStyle[name](value);
+    showCss();
+}
+
+function showCss() {
+    cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join('; </span><span>');
+
 }
